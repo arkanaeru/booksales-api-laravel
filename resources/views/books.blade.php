@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Selamat datang</title>
+    <title>Book List</title>
 </head>
 <body>
-    <h1>Hello world</h1>
-    <p>Selamat datang di Toko Booksales</p>
+    <h1>Daftar Buku</h1>
+    <ul>
+        @foreach ($books as $book)
+            <li>
+                {{ $book->title }} - <strong>{{ $book->author->name }}</strong>
+            </li>
+        @endforeach
+    </ul>
 </body>
 </html>
 
