@@ -12,8 +12,8 @@ return new class extends Migration
             $table->id();                     // Primary key
             $table->string('title');          // Judul buku
             $table->foreignId('author_id')   // Foreign key ke authors
-                  ->constrained()
-                  ->onDelete('cascade');      // Hapus buku jika author dihapus
+                ->constrained()
+                ->onDelete('cascade');      // Hapus buku jika author dihapus
             $table->timestamps();
         });
     }
